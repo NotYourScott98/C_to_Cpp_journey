@@ -8,7 +8,7 @@ printf("enter sides of triangle: ");
 scanf("%f,%f,%f" , &a,&b,&c);
 
 sp = (a+b+c)/2;
-area = (sqrt((sp-a)*(sp-b)*(sp-c)));
+area = (sqrt(sp*(sp-a)*(sp-b)*(sp-c)));
 
 printf("area of triangle is: %f",area);
 return 0;
