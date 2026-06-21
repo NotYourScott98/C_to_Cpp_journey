@@ -14,4 +14,5 @@ int main()
  printf("perimeter of the triangle is: %f",2*sp);
  
  return 0;
- }
+
+}
