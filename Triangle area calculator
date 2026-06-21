@@ -10,7 +10,7 @@ int main()
  sp = (a+b+c)/2 ;
  area = (sqrt(sp*(sp-a)*(sp-b)*(sp-c)));
  
- printf("area of the triangle is: %f",area);
+ printf("area of the triangle is: %f\n",area);
  printf("perimeter of the triangle is: %f",2*sp);
  
  return 0;
