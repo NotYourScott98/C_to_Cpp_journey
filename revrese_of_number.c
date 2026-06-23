@@ -1,30 +1,22 @@
 #include <stdio.h>
 
-int main()
+int main() 
 {
-    int n, d5, d4, d3, d2, d1;
-    long int revnum;
+    long int n, revnum = 0, remainder;
 
-    printf("Enter a five digit number (less than 32767): ");
-    scanf("%d", &n);
+    printf("Enter an integer: ");
+    scanf("%ld", &n);
 
-    d5 = n % 10;
-    n = n / 10;
+    // Using a while loop makes the logic dynamic for any number of digits
+    while (n != 0) 
+    {
+        remainder = n % 10;               // 1. Peel off the last digit
+        revnum = (revnum * 10) + remainder; // 2. Shift existing reversed digits left and add new one
+        n = n / 10;                       // 3. Shave off the last digit from the original number
+    }
 
-    d4 = n % 10;
-    n = n / 10;
-
-    d3 = n % 10;
-    n = n / 10;
-
-    d2 = n % 10;
-    n = n / 10;
-
-    d1 = n % 10;
-
-    revnum = d5 * 10000 + d4 * 1000 + d3 * 100 + d2 * 10 + d1;
-
-    printf("The reversed number is %ld\n", revnum);
+    printf("The reversed number is: %ld\n", revnum);
 
     return 0;
 }
+
